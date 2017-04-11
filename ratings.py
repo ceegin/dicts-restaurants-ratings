@@ -3,7 +3,9 @@
 
 # put your code here
 import random
+import sys
 
+file_name = sys.argv[1]
 ratings = {}
 
 def make_ratings(file_name):
@@ -44,6 +46,7 @@ def random_update(ratings):
     ratings[update] = new_rating
     return
 
+
 def chosen_update(ratings):
     """Returns chosen restaurant"""
     chosen_restaurant = raw_input("Enter restaurant name: ")
@@ -78,5 +81,5 @@ def make_choice():
         return
 
 
-make_ratings("scores.txt")
+make_ratings(file_name)
 make_choice()
